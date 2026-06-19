@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -6,99 +7,206 @@
 
 body {
   font-family: 'Noto Sans JP', sans-serif;
-  background: #F0F7FF;
+  background: #F5F7FA;
   color: #2C2C2A;
   line-height: 1.7;
 }
 
 header {
-  background: #042C53;
+  background: linear-gradient(135deg, #042C53, #185FA5);
   color: white;
   padding: 20px 40px;
-}
-
-header h1 {
-  font-size: 1.5rem;
+  box-shadow: 0 2px 12px rgba(4,44,83,0.15);
 }
 
 header a {
   color: white;
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+header h1 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.hero {
+  background: linear-gradient(135deg, #042C53, #185FA5);
+  color: white;
+  padding: 48px 40px 56px;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: white;
+}
+
+.hero p {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.8);
 }
 
 .container {
   max-width: 800px;
-  margin: 40px auto;
+  margin: 0 auto;
   padding: 0 20px;
 }
 
-h2 {
-  color: #042C53;
-  margin-bottom: 16px;
+.search-card {
+  background: white;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 4px 24px rgba(4,44,83,0.10);
+  margin-top: -32px;
+  margin-bottom: 40px;
 }
 
-form div {
-  margin-bottom: 16px;
+.search-card h2 {
+  font-size: 1.1rem;
+  color: #042C53;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 20px;
 }
 
 label {
   display: block;
-  font-size: 0.9rem;
+  font-size: 0.82rem;
   color: #5F5E5A;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
+  font-weight: 500;
 }
 
 select {
   width: 100%;
-  padding: 10px;
+  padding: 10px 14px;
   border: 1px solid #D3D1C7;
   border-radius: 8px;
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-family: 'Noto Sans JP', sans-serif;
   background: white;
+  color: #2C2C2A;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%235F5E5A' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+}
+
+select:focus {
+  outline: none;
+  border-color: #185FA5;
 }
 
 button {
   width: 100%;
-  padding: 12px;
-  background: #185FA5;
+  padding: 14px;
+  background: linear-gradient(135deg, #185FA5, #042C53);
   color: white;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   font-size: 1rem;
   font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 700;
   cursor: pointer;
-  margin-top: 8px;
+  letter-spacing: 0.04em;
+  transition: opacity 0.2s;
 }
 
 button:hover {
-  background: #042C53;
+  opacity: 0.85;
+}
+
+.results-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.results-header h2 {
+  font-size: 1.2rem;
+  color: #042C53;
+  font-weight: 700;
+}
+
+.results-count {
+  font-size: 0.85rem;
+  color: #5F5E5A;
 }
 
 .card {
   background: white;
-  border: 1px solid #D3D1C7;
-  border-radius: 12px;
+  border-radius: 14px;
   padding: 24px;
   margin-bottom: 16px;
+  box-shadow: 0 2px 12px rgba(4,44,83,0.07);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(4,44,83,0.12);
 }
 
 .card h2 {
-  font-size: 1.1rem;
-  margin-bottom: 8px;
+  font-size: 1.05rem;
+  color: #042C53;
+  margin-bottom: 10px;
+  font-weight: 700;
 }
 
-.card p {
-  font-size: 0.9rem;
-  color: #5F5E5A;
+.card-tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
   margin-bottom: 12px;
 }
 
-.card a {
-  color: #185FA5;
-  font-size: 0.9rem;
+.tag {
+  font-size: 0.78rem;
+  padding: 4px 10px;
+  border-radius: 20px;
   font-weight: 500;
+}
+
+.tag-city { background: #E6F1FB; color: #185FA5; }
+.tag-genre { background: #E1F5EE; color: #0F6E56; }
+.tag-duration { background: #FAEEDA; color: #854F0B; }
+
+.card p {
+  font-size: 0.88rem;
+  color: #5F5E5A;
+  margin-bottom: 14px;
+  line-height: 1.6;
+}
+
+.card a.detail-link {
+  display: inline-block;
+  color: #185FA5;
+  font-size: 0.88rem;
+  font-weight: 700;
   text-decoration: none;
+  border: 1.5px solid #185FA5;
+  padding: 6px 16px;
+  border-radius: 20px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.card a.detail-link:hover {
+  background: #185FA5;
+  color: white;
 }
 
 .back-link {
@@ -107,6 +215,33 @@ button:hover {
   color: #185FA5;
   text-decoration: none;
   font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+.detail-card {
+  background: white;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 4px 24px rgba(4,44,83,0.10);
+  margin-bottom: 40px;
+}
+
+.detail-card h1 {
+  font-size: 1.5rem;
+  color: #042C53;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.detail-tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
 }
 
 table {
@@ -116,8 +251,8 @@ table {
 }
 
 th, td {
-  padding: 12px;
-  border-bottom: 1px solid #D3D1C7;
+  padding: 12px 16px;
+  border-bottom: 1px solid #F1EFE8;
   text-align: left;
   font-size: 0.9rem;
 }
@@ -125,10 +260,57 @@ th, td {
 th {
   color: #5F5E5A;
   width: 120px;
+  font-weight: 500;
+}
+
+td {
+  color: #2C2C2A;
+  font-weight: 500;
+}
+
+.section-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #042C53;
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #E6F1FB;
+}
+
+.description-text {
+  font-size: 0.92rem;
+  color: #444441;
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+
+.point-box {
+  background: linear-gradient(135deg, #E6F1FB, #E1F5EE);
+  border-radius: 12px;
+  padding: 20px 24px;
+  font-size: 0.92rem;
+  color: #042C53;
+  font-weight: 500;
+  line-height: 1.7;
 }
 
 .no-results {
   text-align: center;
   color: #5F5E5A;
-  padding: 40px;
+  padding: 60px 20px;
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(4,44,83,0.07);
+}
+
+.no-results p {
+  font-size: 1rem;
+  margin-bottom: 16px;
+}
+
+@media (max-width: 600px) {
+  .form-grid { grid-template-columns: 1fr; }
+  header { padding: 16px 20px; }
+  .hero { padding: 32px 20px 48px; }
+  .search-card { padding: 24px 20px; }
 }
