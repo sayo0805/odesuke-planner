@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  background: #F0F7FF;
+  color: #2C2C2A;
+  line-height: 1.7;
+}
+
+header {
+  background: #042C53;
+  color: white;
+  padding: 20px 40px;
+}
+
+header h1 {
+  font-size: 1.5rem;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+h2 {
+  color: #042C53;
+  margin-bottom: 16px;
+}
+
+form div {
+  margin-bottom: 16px;
+}
+
+label {
+  display: block;
+  font-size: 0.9rem;
+  color: #5F5E5A;
+  margin-bottom: 4px;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #D3D1C7;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: 'Noto Sans JP', sans-serif;
+  background: white;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: #185FA5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: 'Noto Sans JP', sans-serif;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+button:hover {
+  background: #042C53;
+}
+
+.card {
+  background: white;
+  border: 1px solid #D3D1C7;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 16px;
+}
+
+.card h2 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: #5F5E5A;
+  margin-bottom: 12px;
+}
+
+.card a {
+  color: #185FA5;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 24px;
+  color: #185FA5;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 24px;
+}
+
+th, td {
+  padding: 12px;
+  border-bottom: 1px solid #D3D1C7;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+th {
+  color: #5F5E5A;
+  width: 120px;
+}
+
+.no-results {
+  text-align: center;
+  color: #5F5E5A;
+  padding: 40px;
+}
