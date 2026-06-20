@@ -9,52 +9,66 @@
 </head>
 <body>
   <header>
-    <h1>🗾 おでかけプランナー</h1>
+    <a href="/"><h1>🗾 おでかけプランナー</h1></a>
   </header>
 
+  <div class="hero">
+    <h2>富山のおでかけ先を見つけよう</h2>
+    <p>条件を選ぶだけで、ぴったりのスポットが見つかります</p>
+  </div>
+
   <div class="container">
-    <h2>スポットを探す</h2>
-    <form action="/search" method="GET">
-      <div>
-        <label>エリア</label>
-        <select name="city">
-          <option value="">すべて</option>
-          <option value="富山市">富山市</option>
-          <option value="立山町">立山町</option>
-          <option value="黒部市">黒部市</option>
-        </select>
-      </div>
-      <div>
-        <label>同行者</label>
-        <select name="companion">
-          <option value="">すべて</option>
-          <option value="家族">家族</option>
-          <option value="カップル">カップル</option>
-          <option value="友人">友人</option>
-          <option value="一人">一人</option>
-        </select>
-      </div>
-      <div>
-        <label>ジャンル</label>
-        <select name="genre">
-          <option value="">すべて</option>
-          <option value="自然">自然</option>
-          <option value="文化">文化</option>
-          <option value="グルメ">グルメ</option>
-        </select>
-      </div>
-      <div>
-        <label>所要時間</label>
-        <select name="duration">
-          <option value="">すべて</option>
-          <option value="1時間">1時間</option>
-          <option value="2時間">2時間</option>
-          <option value="半日">半日</option>
-          <option value="1日">1日</option>
-        </select>
-      </div>
-      <button type="submit">検索する</button>
-    </form>
+    <div class="search-card">
+      <h2>スポットを探す</h2>
+      <form action="/search" method="GET">
+        <div class="form-grid">
+          <div>
+            <label>エリア</label>
+            <select name="city">
+              <option value="">すべて</option>
+              <option value="富山市">富山市</option>
+              <option value="高岡市">高岡市</option>
+              <option value="立山町">立山町</option>
+              <option value="黒部市">黒部市</option>
+              <option value="氷見市">氷見市</option>
+              <option value="砺波市">砺波市</option>
+              <option value="南砺市">南砺市</option>
+              <option value="射水市">射水市</option>
+            </select>
+          </div>
+          <div>
+            <label>同行者</label>
+            <select name="companion">
+              <option value="">すべて</option>
+              <option value="家族">家族</option>
+              <option value="カップル">カップル</option>
+              <option value="友人">友人</option>
+              <option value="一人">一人</option>
+            </select>
+          </div>
+          <div>
+            <label>ジャンル</label>
+            <select name="genre">
+              <option value="">すべて</option>
+              <option value="自然">自然</option>
+              <option value="文化">文化</option>
+              <option value="グルメ">グルメ</option>
+            </select>
+          </div>
+          <div>
+            <label>所要時間</label>
+            <select name="duration">
+              <option value="">すべて</option>
+              <option value="1時間">1時間</option>
+              <option value="2時間">2時間</option>
+              <option value="半日">半日</option>
+              <option value="1日">1日</option>
+            </select>
+          </div>
+        </div>
+        <button type="submit">検索する</button>
+      </form>
+    </div>
   </div>
 </body>
 </html>

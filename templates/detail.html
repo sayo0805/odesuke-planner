@@ -12,21 +12,19 @@
     <a href="/"><h1>🗾 おでかけプランナー</h1></a>
   </header>
 
-  <div class="container">
+  <div class="container" style="margin-top: 32px;">
     <a href="javascript:history.back()" class="back-link">← 検索結果に戻る</a>
 
-    <div class="card">
-      <h2>{{ spot.name }}</h2>
+    <div class="detail-card">
+      <h1>{{ spot.name }}</h1>
+
+      <div class="detail-tags">
+        <span class="tag tag-city">📍 {{ spot.city }}</span>
+        <span class="tag tag-genre">{{ spot.genre }}</span>
+        <span class="tag tag-duration">⏱ {{ spot.duration }}</span>
+      </div>
 
       <table>
-        <tr>
-          <th>エリア</th>
-          <td>{{ spot.city }}</td>
-        </tr>
-        <tr>
-          <th>ジャンル</th>
-          <td>{{ spot.genre }}</td>
-        </tr>
         <tr>
           <th>同行者</th>
           <td>{{ spot.companion }}</td>
@@ -37,13 +35,11 @@
         </tr>
       </table>
 
-      <h2>スポット説明</h2>
-      <p>{{ spot.description }}</p>
+      <div class="section-title">スポット説明</div>
+      <p class="description-text">{{ spot.description }}</p>
 
-      <br>
-
-      <h2>おすすめポイント</h2>
-      <p>{{ spot.point }}</p>
+      <div class="section-title">おすすめポイント</div>
+      <div class="point-box">✨ {{ spot.point }}</div>
     </div>
   </div>
 </body>

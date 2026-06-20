@@ -12,23 +12,31 @@
     <a href="/"><h1>🗾 おでかけプランナー</h1></a>
   </header>
 
-  <div class="container">
+  <div class="container" style="margin-top: 32px;">
     <a href="/" class="back-link">← 検索に戻る</a>
 
-    <h2>検索結果</h2>
+    <div class="results-header">
+      <h2>検索結果</h2>
+      <span class="results-count">{{ spots|length }}件見つかりました</span>
+    </div>
 
     {% if spots %}
       {% for spot in spots %}
       <div class="card">
         <h2>{{ spot.name }}</h2>
-        <p>📍 {{ spot.city }} ／ {{ spot.genre }} ／ {{ spot.duration }}</p>
+        <div class="card-tags">
+          <span class="tag tag-city">📍 {{ spot.city }}</span>
+          <span class="tag tag-genre">{{ spot.genre }}</span>
+          <span class="tag tag-duration">⏱ {{ spot.duration }}</span>
+        </div>
         <p>{{ spot.description }}</p>
-        <a href="/spot/{{ spot.id }}">詳しく見る →</a>
+        <a href="/spot/{{ spot.id }}" class="detail-link">詳しく見る →</a>
       </div>
       {% endfor %}
     {% else %}
       <div class="no-results">
         <p>条件に合うスポットが見つかりませんでした。</p>
+        <a href="/" class="back-link">条件を変えて検索する</a>
       </div>
     {% endif %}
   </div>
